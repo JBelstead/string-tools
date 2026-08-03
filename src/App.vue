@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { tools } from './tools'
+import Toast from './components/Toast.vue'
 
 const route = useRoute()
 const activeTool = computed(() => tools.find((tool) => tool.id === route.name))
@@ -30,6 +31,7 @@ const activeTool = computed(() => tools.find((tool) => tool.id === route.name))
         <RouterView />
       </main>
     </div>
+    <Toast />
   </div>
 </template>
 
